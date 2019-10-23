@@ -1,0 +1,214 @@
+<section class="" id="hero-area">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+                <a href="#" class="navbar-brand"><img src="/images/coins.png" alt="" width="40" height="40">Budgety</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-mob-menu" aria-controls="nav-mob-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-mob-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="home-loggedout" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about-us-loggedout" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/users/login" class="nav-link">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/users/register" class="nav-link">Registration</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <div id="hero-banner py-5" style="color: black;">
+            <div class="container text-center">
+                    <div class="space my-5"></div>
+                <div class="row justify-content-center align-item-center  py-2">
+                    <div class="col-md-6 align-self-center">
+                        <img src="/images/bank.png" alt="" class="img-fluid" width="50%" height="50%">
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <p class="display-4 font-weight-normal">Welcome to Budgety!</p>
+                        <p class="lead">New user? No problem, Register down below.</p>
+                        <div class="icon-down"><i class="fas fa-chevron-down fa-2x pt-2"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="space py-3"></div>
+        </div>
+    </section>   
+    <section id="login" class="py-5">
+        <div class="container text-center py-3">
+            <div class="h3">Register With Us</div>
+            <p class="lead">Fill the form below</p>
+            <div class="row justify-content-center align-self-center">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <% include ./partials/messages %>
+                        <form action="/users/register" class="form" method="POST">
+                            <div class="form-group py-2">
+                                    <div class="input-group input-group-lg">
+                                        <div class="container">
+                                            <div class="row m-0">
+                                                <div class="col-2 ">
+                                                    <span class="input-group-addon"><i class="fa fa-user fa-2x pt-2"></i></span>
+                                                </div>
+                                                <div class="col-5  px-2">
+                                                    <input name="Fname" type="Name" id="Fname" class="form-control rounded" placeholder="First Name" value="<%= typeof Fname != 'undefined' ? Fname: '' %>">
+                                                </div>
+                                                <div class="col-5  px-2">
+                                                    <input name="Lname" type="Name" id="Lname" class="form-control rounded" placeholder="Last Name" value="<%= typeof Lname != 'undefined' ? Lname: '' %>">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="form-row">
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="form-group py-2">
+                                        <div class="input-group input-group-lg">
+                                            <div class="container">
+                                                <div class="row  m-0">
+                                                    <div class="col-2 ">
+                                                        <span class="input-group-addon"><i class="fas fa-lock fa-2x pt-2"></i></span>
+                                                    </div>
+                                                    <div class="col-10  px-1">
+                                                        <input name="password" type="password" class="form-control rounded" placeholder="Password of length 10" value="<%= typeof password != 'undefined' ? password: '' %>">
+                                                        <div class="col-12">
+                                                            <p style="font-size: 14px;font-family: lato" class="my-2 lead">Enter password of atleast length 10 </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="form-group py-2">
+                                        <div class="input-group input-group-lg">
+                                            <div class="container">
+                                                <div class="row  m-0"> 
+                                                    <div class="col-2 ">
+                                                        <span class="input-group-addon"><i class="fas fa-lock fa-2x pt-2"></i></span>
+                                                    </div>
+                                                    <div class="col-10  px-1 mb-4 pb-1">
+                                                        <input name="password2" type="password" class="form-control rounded" placeholder="Confirm Password" value="<%= typeof password2 != 'undefined' ? password2: '' %>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-lg-6 align-self-center">
+                                <div class="form-group py-2">
+                                        <div class="input-group input-group-lg">
+                                            <div class="container">
+                                                <div class="row  m-0"> 
+                                                    <div class="col-2 ">
+                                                        <span class="input-group-addon"><i class="fas fa-envelope-open fa-2x pt-2"></i></span>
+                                                    </div>
+                                                    <div class="col-10  px-1">
+                                                        <input name="email" type="text" class="form-control rounded" placeholder="Email" value="<%= typeof email != 'undefined' ? email: '' %>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="form-group py-2">
+                                        <div class="input-group input-group-lg">
+                                            <div class="container">
+                                                <div class="row  m-0">    
+                                                    <div class="col-2 ">
+                                                        <span class="input-group-addon"><i class="fas fa-mobile-alt fa-2x pt-2"></i></span>
+                                                    </div>
+                                                    <div class="col-10  px-1">
+                                                        <input name="phone" type="number" class="form-control rounded" placeholder="Phone Number" value="<%= typeof phoneno != 'undefined' ? phoneno: '' %>">
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-lg-6 align-self-center">
+                                <div class="form-group py-2">
+                                        <div class="input-group input-group-lg">
+                                            <div class="container">
+                                                <div class="row  m-0"> 
+                                                    <div class="col-2 ">
+                                                        <span class="input-group-addon"><i class="fas fa-location-arrow fa-2x pt-2"></i></span>
+                                                    </div>
+                                                    <div class="col-10  px-1">
+                                                        <input name="add1" type="text" class="form-control rounded" placeholder="Address Line:1" value="<%= typeof add1 != 'undefined' ? add1: '' %>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="form-group py-2">
+                                        <div class="input-group input-group-lg">
+                                            <div class="container">
+                                                <div class="row  m-0">    
+                                                    <div class="col-2 ">
+                                                    </div>
+                                                    <div class="col-10  px-1">
+                                                        <input name="add2" type="text" class="form-control rounded" placeholder="Address Line:2" value="<%= typeof add2 != 'undefined' ? add2: '' %>">
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-lg-6 align-self-center">
+                                <div class="form-group py-2">
+                                        <div class="input-group input-group-lg">
+                                            <div class="container">
+                                                <div class="row  m-0"> 
+                                                    <div class="col-2 ">
+                                                        <span class="input-group-addon"><i class="fas fa-thumbtack fa-2x pt-2"></i></span>
+                                                    </div>
+                                                    <div class="col-10  px-1">
+                                                        <input name="city" type="text" class="form-control rounded" placeholder="City" value="<%= typeof city != 'undefined' ? city: '' %>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="form-group py-2">
+                                        <div class="input-group input-group-lg">
+                                            <div class="container">
+                                                <div class="row  m-0">    
+                                                    <div class="col-2 ">
+                                                        <span class="input-group-addon"><i class="fas fa-map-marker-alt fa-2x pt-2"></i></span>
+                                                    </div>
+                                                    <div class="col-10  px-1">
+                                                        <input name="state" type="text" class="form-control rounded" placeholder="State" value="<%= typeof state != 'undefined' ? state: '' %>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-block button-rounded" style="background: #ff5e62;">
+                        </form>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <p class="lead">Already registered? <a href="#" style="color: #ff5e62;">Login here</a> </p>
+            <div class="space py-5"></div>
+        </div>
+    </section>

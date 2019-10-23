@@ -1,0 +1,97 @@
+
+<section class="" id="hero-area">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+                <a href="#" class="navbar-brand"><img src="/images/coins.png" alt="" width="40" height="40">Budgety</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-mob-menu" aria-controls="nav-mob-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-mob-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="home-loggedin" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dashboard" class="nav-link">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/users/logout" class="nav-link">Log Out</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dashboard" class="nav-link">Hi <%= Fname %>!</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <div id="hero-banner py-5" style="color: black;">
+            <div class="container text-center">
+                    <div class="space my-5"></div>
+                <div class="row justify-content-center align-item-center  py-2">
+                    <div class="col-md-6 align-self-center">
+                        <img src="/images/bank.png" alt="" class="img-fluid" width="50%" height="50%">
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <p class="display-4 font-weight-normal">Howdy <%= Fname %> !</p>
+                        <p class="lead">Welcome to your Budgety Profile!</p>
+                        <div class="icon-down"><i class="fas fa-chevron-down fa-2x pt-2"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="space py-3"></div>
+        </div>
+    </section>   
+    <section id="profile" class="py-5">
+        <div class="container text-center">
+            <p class="h3 font-weight-bold">Your Profile</p>
+            <hr width="30%">
+            <div class="row justify-content-center align-item-center  py-5">
+                <div class="col-lg-2 col-md-1"></div>
+                <div class="col-lg-8 col-md-10">
+                    <div class="card bg-dark mb-3">
+                        <div class="card-body">
+                            <img src="/images/debraj.jpg" alt="" class="propic img-fluid rounded-circle w-50" width="20%" height="20%">
+                            <div class="py-3"></div>
+                            <table class="table table-borderless table-hover table-dark">
+                                <tbody>
+                                    <tr>
+                                        <td>Name:</td>
+                                        <td><%= Fname %> <%= Lname %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email:</td>
+                                        <td><%= email %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number:</td>
+                                        <td><%= phone %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Joined Budgety:</td>
+                                        <td><%= DOJ %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address Line 1:</td>
+                                        <td><%= add1 %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address Line 2:</td>
+                                        <td><%= add2 %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>City:</td>
+                                        <td><%= city %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>State:</td>
+                                        <td><%= state %></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a href="/users/logout" class="lgbtn btn d-inline rounded px-4 py-2">Logout</a>
+                </div>
+                <div class="col-lg-2 col-md-1"></div>
+            </div>
+        </div>
+    </section>
